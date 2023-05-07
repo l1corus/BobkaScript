@@ -6,6 +6,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body style="background-color: black">
+{% load static %}
 {% block navbar %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -22,7 +23,7 @@
     </button>
         <div class="collapse navbar-collapse" id="navbarText">
 
-            <img style="margin-left: 35%" src="/main/templates/main/images/BS.png" width="2%" height="2%">
+            <img style="margin-left: 35%" src="{% static 'main/img/images/BS.png' %}" width="2%" height="2%">
             <a class="navbar-brand" href="/">BobkaScript</a>
 
             <a class="navbar-brand" href="about" style="margin-left: 35%">Про нас</a>
@@ -33,7 +34,7 @@
 <div class="container">
     <div align="center">
         <h1 style="color: white">Популярность BobkaScript:</h1>
-        <img src="/main/templates/main/images/grafic.png"  width="80%" height="50%">
+        <img src="{% static 'main/img/images/grafic.png' %}"  width="80%" height="50%">
         <div align="container">
             <div class="container" style="color: white" align="center">
                 Из данных графиков можно, понять, что BobkaScript всё больше обретает популярность <br>
@@ -54,7 +55,7 @@
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="/main/templates/main/images/hanako.png" class="img-fluid rounded-start" alt="...">
+                    <img src="{% static 'main/img/images/hanako.png' %}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -73,7 +74,7 @@
         <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="/main/templates/main/images/lili.png" class="img-fluid rounded-start" alt="...">
+      <img src="{% static 'main/img/images/lili.png' %}" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -90,7 +91,7 @@
         <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="/main/templates/main/images/vitaminka.png" class="img-fluid rounded-start" alt="...">
+      <img src="{% static 'main/img/images/vitaminka.png' %}" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">

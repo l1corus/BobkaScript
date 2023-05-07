@@ -6,6 +6,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body style="background-color: black">
+{% load static %}
 {% block navbar %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -22,7 +23,7 @@
     </button>
         <div class="collapse navbar-collapse" id="navbarText">
 
-            <img style="margin-left: 35%" src="/main/templates/main/images/BS.png" width="2%" height="2%">
+            <img style="margin-left: 35%" src="{% static 'main/img/images/BS.png' %}" width="2%" height="2%">
             <a class="navbar-brand" href="/">BobkaScript</a>
 
             <a class="navbar-brand" href="about" style="margin-left: 35%">Про нас</a>
@@ -60,9 +61,9 @@
                     <h6>"число" - данный тип может содержать в себе челое число.</h6>
                     <h6>"неровныйпоцан" и "неровныйчел" - тип неровныйпоцан также, как и неровныйчел может содержать в себе числа с запятой, но неровныйпоцан содержит больше цифр после запятой, но в обмен на это весит больше, чем неровныйчел.</h6>
                     <h6>"свастика" - данный тип может содержать в себе 1 символ из таблицы кодировки ASCII, вот так выглядит данная таблица.</h6>
-                    <img src="/main/templates/main/images/ASCII.png">
+                    <img src="{% static 'main/img/images/ASCII.png' %}">
                     <h6>массивы представляют собой указаталь на определённый участок в памяти, содержащий в себе данные одного типа</h6>
-                    <img src="/main/templates/main/images/paint.png">
+                    <img src="{% static 'main/img/images/paint.png' %}">
                     <h6>Исходя из картинки выше вы можете более понятно понять как выглядит массив и то, что массив индексируется с нуля (индексом называют номер элемента в массиве)</h6>
                     <h6>Массивы элемент которых является ссылкой на другой участок памяти называют двумерным или матрицей.</h6>
                     <h6>"верёвка" - данный тип является массивом "свастик"</h6>
@@ -86,7 +87,7 @@
                     <h6>Данное действие достаточно распространено, потому что очень удобно делить целую задачу на несколько малых.</h6>
                     <h6>Функции, как и переменные различают по типу возвращаемого значения, то есть, если функция возвращает тип данетнаверное, то она имеет тип данетнаверное.</h6>
 
-                    <img src="/main/templates/main/images/cod.png">
+                    <img src="{% static 'main/img/images/cod.png' %}">
                     <h6>Так выглядит объявление функции (тип функции, название, в скобках тип переменной, передаваемой в функцию, а потом локальное имя переменной (переменные в подпрограмме создаются локально из-за чего никак не конфликтуют с переменными из основной программы или другой подпрограммы)</h6>
                     <h6>Вызывается функция так: имя функции(переменные, которые вы передаёте в функцию) (не забудьте про бля)</h6>
                     <br>
