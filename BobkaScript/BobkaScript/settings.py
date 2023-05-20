@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import os
 from os.path import join
 from pathlib import Path
 
@@ -25,6 +26,7 @@ SECRET_KEY = 'django-insecure-8wb(z8p9^zp5ww!f=p8-&+(d%$5_1@)m*dz!mkpo@f8%l15lr-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#ALLOWED_HOSTS = ['127.0.0.1']
 ALLOWED_HOSTS = []
 
 
@@ -119,9 +121,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = (os.path.join(os.path.dirname(__file__), 'static'),)
 MEDIA__ROOT = join(BASE_DIR, '')
 MEDIA_URL = '//'
+STATIC_ROOT = ''
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
+
+#
+# STATIC_URL = '/static/'
+#
+#
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
