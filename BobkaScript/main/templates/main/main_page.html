@@ -38,9 +38,12 @@
 
 
 
-
+{% block main %}
 <div align="center" class=" col-md-offset-2 col-sm-12 col-sm-offset-0">
-<img src="{% static 'main/img/images/BS.png' %}" width="30%" height="30%">
+
+<a href="https://vkrf.ru/do/dodesign/?yclid=8426128646391201791">
+    <img src="{% static 'main/img/images/BS.png' %}" width="30%" height="30%">
+</a>
    <!-- <img src="{{ STATIC_URL }}img/images/BS.png" width="30%" height="30%">------------------------------>
 <h1 class="brand-heading" style="color: white">BobkaScript</h1>
 <p class="intro-text" style="color: white">Самый понятный и удобный язык программирования в мире</p>
@@ -60,9 +63,9 @@
               <li>Теперь нет непонятных выражений</li>
               <li>Рекомендуем уже опытным программистам</li>
             </ul>
-              <a href="#scrollspyHeading1">
+              <!--<a href="#scrollspyHeading1">
                   <button type="button" class="w-100 btn btn-lg btn-outline-warning">Установить</button>
-              </a>
+              </a>-->
 
           </div>
         </div>
@@ -80,7 +83,7 @@
               <li>Теперь нет непонятных слов</li>
               <li>Рекомендуем начинающим программистам</li>
             </ul>
-            <a href="#scrollspyHeading2"><button type="button" class="w-100 btn btn-lg btn-outline-warning">Установить</button></a>
+            <!--<a href="#scrollspyHeading2"><button type="button" class="w-100 btn btn-lg btn-outline-warning">Установить</button></a>-->
           </div>
         </div>
       </div>
@@ -97,15 +100,21 @@
               <li>Теперь нет непонятных выражений и слов</li>
               <li>Рекомендуем начинающим программистам</li>
             </ul>
-           <a href="#scrollspyHeading3"> <button type="button" class="w-100 btn btn-lg btn-outline-warning">Установить</button></a>
+           <!--<a href="#scrollspyHeading3"> <button type="button" class="w-100 btn btn-lg btn-outline-warning">Установить</button></a>-->
           </div>
         </div>
       </div>
 
 </div>
+{% endblock %}
+
+
 
 {% block accordion %}
     <div class="accordion accordion-flush" id="accordionFlushExample">
+
+
+
   <div class="accordion-item bg-dark">
     <h2 class="accordion-header" align="center">
       <button  class="accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -115,7 +124,7 @@
     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" style="background-image: url({% static 'main/img/images/background1.png' %}) ">
       <div class="accordion-body">
 
-          <h3 style="color: white">Данный пакет заменяет символы</h3>
+          <!--<h3 style="color: white">Данный пакет заменяет символы</h3>-->
 
 
           <button class="btn btn-link bg-dark" id="button1" onclick="CopyToClipboard('div1')"
@@ -157,7 +166,7 @@
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" >
       <div class="accordion-body bg-dark" style="background-image: url('{% static 'main/img/images/background1.png' %}')">
-          <h3 style="color: white">Данный пакет заменяет ключевые слова</h3>
+          <!--<h3 style="color: white">Данный пакет заменяет ключевые слова</h3>-->
 
 
               <button class="btn btn-link bg-dark" id="button2" onclick="CopyToClipboard('divdiv2')" style="color: #FFC107;border: 1px solid #FFC107; background-color: transparent; color: #FFC107;">
@@ -233,7 +242,7 @@
     </h2>
     <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body bg-dark" style="background-image: url('{% static 'main/img/images/background1.png' %}')">
-            <h3 style="color: white">Данный пакет заменяет символы и ключевые слова</h3>
+            <!--<h3 style="color: white">Данный пакет заменяет символы и ключевые слова</h3>-->
 
               <button class="btn btn-link bg-dark" id="button3" onclick="CopyToClipboard('divdivdiv3')" style="color: #FFC107;border: 1px solid #FFC107; background-color: transparent; color: #FFC107;">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
@@ -378,6 +387,7 @@
                 <p>Open Source проект</p>
                 <p><a href="https://cyberleninka.ru/article/n/vremennaya-perspektiva-narkozavisimyh-i-ee-rol-v-protsesse-reabilitatsii" style="color: #FFC107">Перспективы</a></p>
                 <p>Популярность</p>
+                <img src="{% static 'main/img/images/EMI.png' %}" width="54%" height="42%" style="position: absolute; bottom: 0;">
             </div>
         </div>
 
@@ -387,8 +397,7 @@
 
 
 
-        <p>Язык находится в процессе разработки, мы рады любой
-            помощи в поиске багов и всем, кто готов
+        <p>Язык находится в процессе разработки, <a href="https://rehabfamily.com/articles/razdvoenie-lichnosti/" style="color: #FFC107">мы</a> рады всем, кто готов
             помочь нам продолжить начатое!</p>
     </div>
 {% endblock %}
