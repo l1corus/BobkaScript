@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import *
 
 def main_page(request):
     return render(request, 'main/main_page.html')
@@ -10,5 +10,10 @@ def docs(request):
 
 
 def about(request):
-    return render(request, 'main/about.html')
+    posts = Post.objects.all()
+    return render(request, 'main/about.html', {'posts': False})
 
+
+def secret(request):
+    posts = Post.objects.all()
+    return render(request, 'main/about.html', {'posts': posts})

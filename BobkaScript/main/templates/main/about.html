@@ -115,7 +115,23 @@
 
     </div>
 
+{% if posts %}
+    <div style="color: white">
 
+        {% for item in posts %}
+
+            Через статику хоть кого <img width="500" height="300" src="{% static 'item.image.url' %}"><br>
+            Через статику Зеле - <img width="500" height="300" src="{% static 'main/img/images/zele.jpg' %}"><br>
+            Через юрл - <img width="500" height="300" src="{{ item.image.url }}"><br>
+            <h1>{{ item.image.url }}</h1>
+            <p>{{ item.title }}</p>
+
+        {% endfor %}
+
+
+
+    </div>
+{% endif %}
 
 
 </div>
